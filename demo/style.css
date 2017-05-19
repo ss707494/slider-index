@@ -1,0 +1,11 @@
+
+.header-box {
+  /*width: 60%;*/
+}
+
+.list-item {
+  height: 10rem;
+  border: 1px solid;
+  line-height: 2rem;
+
+}
