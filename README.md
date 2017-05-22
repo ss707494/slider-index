@@ -1,4 +1,5 @@
 # slider-index 
+**react组件**
 类似手机联系人滑动索引
 
 ## Getting Started
