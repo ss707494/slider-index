@@ -84,7 +84,7 @@ export default class SliderIndex extends React.Component {
         e.preventDefault();
         // console.log(e.defaultPrevented);
         const el = document.elementFromPoint(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
-        if (el.getAttribute('data-isright')) {
+        if (el && el.getAttribute('data-isright')) {
             this.setState({
                 index: el.innerText,
                 showZimu: 1
