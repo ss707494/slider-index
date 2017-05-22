@@ -122,7 +122,7 @@ export default class SliderIndex extends React.Component {
                 }
             </div>
             {
-                index ? <div className={props.centerStyle} style={1 ||showZimu ? style.hashTitle : style.noHashTitle}>{index}</div>
+                index ? <div className={props.centerStyle} style={showZimu ? style.hashTitle : style.noHashTitle}>{index}</div>
                     : ''
             }
         </div>
