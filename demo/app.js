@@ -17,6 +17,11 @@ class App extends React.Component {
         })
     }
 
+    componentDidMount() {
+        window.addEventListener("scroll", function (e) {
+        })
+    }
+
     render() {
         const _self = this
         return <div className="header-box">
@@ -25,8 +30,8 @@ class App extends React.Component {
                     index="H"
                     centerStyle="center"
                     rightListStyle="rList"
-                    fontSizeInRight="50"
-                    fontSizeInCenter="100"
+                    fontSizeInRight="10"
+                    fontSizeInCenter="20"
             />
         </div>
     }

@@ -12,14 +12,14 @@
 
 .center {
     background: rgba(128, 16, 38, 0.06);
-    width: 10rem;
-    height: 10rem;
-    font-size: 7rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 4rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .rList {
-    height: 102rem;
+    height: 30rem;
 }

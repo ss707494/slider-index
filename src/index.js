@@ -13,9 +13,10 @@ let style = {
     },
     hashTitle: {
         position: 'fixed',
-        right: '50%',
+        left: '50%',
         top: '50%',
-        color: '#000000',
+        transform: 'translateY(-50%) translateX(-50%)',
+        borderRadius: '20%'
     },
     noHashTitle: {
         display: 'none',
@@ -121,7 +122,7 @@ export default class SliderIndex extends React.Component {
                 }
             </div>
             {
-                index ? <div className={props.centerStyle} style={showZimu ? style.hashTitle : style.noHashTitle}>{index}</div>
+                index ? <div className={props.centerStyle} style={1 ||showZimu ? style.hashTitle : style.noHashTitle}>{index}</div>
                     : ''
             }
         </div>
