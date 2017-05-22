@@ -23,6 +23,10 @@ class App extends React.Component {
             {_self.state.list.map(e => <div className="list-item" id={'i' + e} key={e}>{e}</div>)}
             <Slider touchMoveCallback={(e, index) => { location.hash = 'i' + index;} }
                     index="H"
+                    centerStyle="center"
+                    rightListStyle="rList"
+                    fontSizeInRight="50"
+                    fontSizeInCenter="100"
             />
         </div>
     }

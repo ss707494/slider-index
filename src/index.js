@@ -6,7 +6,7 @@ let style = {
         position: 'fixed',
         right: '20px',
         top: '3em',
-        textAlign: 'right',
+        textAlign: 'center',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-around'
@@ -43,7 +43,12 @@ export default class SliderIndex extends React.Component {
 
     static defaultProps = {
         touchMoveCallback: e => {
-        }
+        },
+        centerStyle:'',
+        rightListStyle: '',
+        rightListItemStyle: '',
+        fontSizeInRight: '20',
+        fontSizeInCenter: '50',
     }
 
     constructor(props) {
@@ -53,9 +58,9 @@ export default class SliderIndex extends React.Component {
             showZimu: 0
         }
         const props2 = this.props;
-        // style = {...style, ...props2.cusStyle};
-        style.hashTitle.fontSize = (props2.fontSize || '20') + 'px';
-        style.zimuLarger.fontSize = (props2.fontSizeL || '50') + 'px';
+        this.charList = props.charList || _getCharList();
+        style.zimu.fontSize = (props2.fontSizeInRight || '20') + 'px';
+        style.zimuLarger.fontSize = (props2.fontSizeInCenter || '50') + 'px';
     }
 
     componentWillMount() {
@@ -102,13 +107,12 @@ export default class SliderIndex extends React.Component {
     }
 
     render() {
-        var {state, _showStart, _showIndex, _fadeOut} = this,
-            {index, showZimu} = state,
-            getCharList = _getCharList();
+        var {state, props, _showStart, _showIndex, _fadeOut, charList} = this,
+            {index, showZimu} = state
         return <div>
-            <div style={style.pos}>
+            <div className={props.rightListStyle} style={style.pos}>
                 {
-                    getCharList.map(e => <div className="--ll" style={index === e ? style.zimuLarger : style.zimu}
+                    charList.map(e => <div className={props.ListItemStyle} style={index === e ? style.zimuLarger : style.zimu}
                                               data-isRight="true" key={e}
                                               onTouchStart={_showStart}
                                               onTouchMove={_showIndex}
@@ -117,7 +121,7 @@ export default class SliderIndex extends React.Component {
                 }
             </div>
             {
-                index ? <div style={showZimu ? style.hashTitle : style.noHashTitle}>{index}</div>
+                index ? <div className={props.centerStyle} style={showZimu ? style.hashTitle : style.noHashTitle}>{index}</div>
                     : ''
             }
         </div>

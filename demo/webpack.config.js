@@ -13,7 +13,7 @@ const config = {
     output: {
         path: path.resolve(__dirname, defaultPath, ''),
         filename: '[name].js',
-        publicPath: defaultPath
+        // publicPath: '/' + defaultPath
     },
     module: {
         rules: [
@@ -35,7 +35,7 @@ const config = {
                 },
             },
             {
-                test: /\.css|\.scss|\.sass$/,
+                test: /\.css$/,
                 use: [
                     {
                         loader: 'style-loader',
