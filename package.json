@@ -1,6 +1,6 @@
 {
   "name": "slider-index",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "类似手机联系人滑动索引--自己测试用的",
   "main": "lib/index.js",
   "files": [
